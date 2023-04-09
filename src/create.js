@@ -1,10 +1,10 @@
 import { db } from "./dbConnect.js";
 
 const newCustomer = {
-  firstName: "Damian",
-  lastName: "Montero",
-  email: "damian@bocacode.com",
-  phone: "976-CODE",
+  firstName: "Camila",
+  lastName: "Sandoval",
+  email: "camila@bocacode.com",
+  phone: "888-CODE",
 };
 
 db.query("INSERT INTO customers SET ?", newCustomer, (err, result) => {
@@ -13,4 +13,5 @@ db.query("INSERT INTO customers SET ?", newCustomer, (err, result) => {
   } else {
     console.log(`Inserted ${result.affectedRows} row(s)`);
   }
+  db.end();
 });
